@@ -12,7 +12,7 @@ class UserService {
         { upsert: true, new: true }
       );
       console.log(user);
-      return user;
+      return user.lean();
     }
     catch(error){
       console.log(error); //better error handling can be implemented later
