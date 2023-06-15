@@ -1,8 +1,8 @@
 const jwt = require('jsonwebtoken');
 
 class JwtUtils {
-  async generateToken(payload) {
-    const authToken =  jwt.sign(payload, process.env.JWT_SECRET_ACCESS, { expiresIn: '2h' });
+  generateToken(payload) {
+    const authToken =  jwt.sign(payload, process.env.JWT_SECRET_ACCESS);
     return {authToken}
   }
 
