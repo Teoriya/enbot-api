@@ -27,6 +27,8 @@ app.get('/', (req, res) => {
     res.send("Hello World");
 })
 
+const dbConnect = require("./utils/db.utils")
+
 try {
     const fs = require('fs')
     let httpsOptions = {
