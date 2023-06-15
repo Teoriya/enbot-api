@@ -11,6 +11,7 @@ class UserService {
         { email, name },
         { upsert: true, new: true }
       );
+      console.log(user);
       return user;
     }
     catch(error){
