@@ -9,7 +9,7 @@ module.exports = async function (req,res,next){
         if(!accessToken){
             throw new Error('Access token not found');
         }
-        const userData = await jwtUtils.verifyAccessToken(accessToken);
+        const userData =  jwtUtils.verifyAccessToken(accessToken);
         if(!userData){
             throw new Error('Invalid access token');
         }
