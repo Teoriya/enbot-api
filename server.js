@@ -19,8 +19,8 @@ app.use(cors(corsOptions));
 // app.use(cookieParser());
 
 
-// const userRouter = require('./routes/user.routes');
-// app.use('/users', userRouter);
+const userRouter = require('./routes/user.routes');
+app.use('/users', userRouter);
 const termRouter = require('./routes/term.routes');
 app.use('/terms', termRouter);
 app.get('/', (req, res) => {
