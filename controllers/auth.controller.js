@@ -10,7 +10,7 @@ class AuthController {
         return res.status(400).send({ error: "Missing required fields" });
     }
     const userData = await UserService.findUserAndCreateIfNotFound(provider_id,email,name);
-    const token =  jwtUtils.generateToken(userData);
+    const token =  jwtUtils.generateToken(userData)?.authToken;
     
     res.setHeader("auth-token", token);
 
