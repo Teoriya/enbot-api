@@ -10,9 +10,9 @@ class UserService {
         { provider_id,email },
         { email, name },
         { upsert: true, new: true }
-      );
+      ).lean();
       console.log(user);
-      return user.lean();
+      return user;
     }
     catch(error){
       console.log(error); //better error handling can be implemented later
