@@ -13,7 +13,9 @@ const corsOptions = {
     credentials: true,
     optionsSuccessStatus: 200
 }
-app.use(cors());
+app.use(cors({
+    exposedHeaders: ["auth-token"],
+}));
 
 // const cookieParser = require('cookie-parser');
 // app.use(cookieParser());
